@@ -309,21 +309,23 @@ nav.stuck{
 }
 .h-card-photo{
   aspect-ratio:1;background:linear-gradient(135deg,var(--off2),var(--off3));
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:10px;
+  display:block;
   position:relative;overflow:hidden;
 }
 .h-card-photo::before{
   content:'';position:absolute;inset:0;
   background:radial-gradient(circle at 40% 35%,rgba(26,107,60,.08),transparent 55%);
+  z-index:2;pointer-events:none;
 }
 .h-card-photo-img{
-  width:100%;height:100%;max-width:100%;display:block;object-fit:cover;object-position:center;
-  position:relative;z-index:1;
+  position:absolute;inset:0;
+  width:100%;height:100%;max-width:none;
+  display:block;object-fit:cover;object-position:center 22%;
+  z-index:1;
 }
 .h-card-photo-icon{font-size:52px;opacity:.22;position:relative;z-index:1}
 .h-card-photo-text{font-family:var(--ff-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted3);position:relative;z-index:1}
-.h-card-scan{position:absolute;top:-3px;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(26,107,60,.4),transparent);animation:scanline 3.5s ease-in-out infinite 1.5s}
+.h-card-scan{position:absolute;top:-3px;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(26,107,60,.4),transparent);animation:scanline 3.5s ease-in-out infinite 1.5s;z-index:3}
 @keyframes scanline{0%{top:-3px;opacity:0}8%{opacity:1}92%{opacity:1}100%{top:100%;opacity:0}}
 .h-card-body{padding:16px 20px;border-top:1px solid var(--border)}
 .h-card-name{font-family:var(--ff-serif);font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-.2px}
