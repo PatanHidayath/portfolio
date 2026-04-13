@@ -286,6 +286,14 @@ nav.stuck{
   padding: 20px 30px;
   /*ADD THIS*/
 }
+@media(max-width:900px){
+  .h-card{
+    width:220px;
+  }
+  .h-card-photo-img{
+    object-position:center;
+  }
+}
 .h-right-pattern{
   position:absolute;inset:0;
   background-image:
@@ -301,15 +309,16 @@ nav.stuck{
 }
 .h-card-wrap{
   position:relative;
-  width: 260%;
-  display; flex;
-  justify-content:center; /* center card */
-  padding-left: 10px;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;/* center card */
+  padding-left:0;
   opacity:0;animation:riseUp 1s var(--ease) .65s both;
 }
 .h-card{
   width:260px;
-  max-width:100%
+  max-width:100%;
   background:var(--white);
   border:1px solid var(--border);
   border-radius:12px;overflow:hidden;
@@ -326,9 +335,14 @@ nav.stuck{
   z-index:2;pointer-events:none;
 }
 .h-card-photo-img{
-  position:absolute;inset:0;
-  width:100%;height:100%;max-width:none;
-  display:block;object-fit:cover;object-position: 38% center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+  object-position:center;
   z-index:1;
 }
 .h-card-photo-icon{font-size:52px;opacity:.22;position:relative;z-index:1}
