@@ -281,8 +281,9 @@ nav.stuck{
   background:var(--off);
   border-left:1px solid var(--border);
   display:flex;flex-direction:column;
-  padding: 20px 40px 20px 30px;
-  transform: translatex(-40px)
+  justify-content: center;/* center horizontally*/
+  align-items: center; /* center vertically */
+  padding: 20px 30px;
   /*ADD THIS*/
 }
 .h-right-pattern{
@@ -302,7 +303,7 @@ nav.stuck{
   position:relative;
   width: 100%;
   display; flex;
-  justify-content:flex-start; /* align left */
+  justify-content:center; /* center card */
   padding-left: 10px;
   opacity:0;animation:riseUp 1s var(--ease) .65s both;
 }
