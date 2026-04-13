@@ -299,12 +299,16 @@ nav.stuck{
     linear-gradient(to right,var(--off) 0%,transparent 30%);
 }
 .h-card-wrap{
-  position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:min(272px,80%);
+  position:relative;
+  width: 100%;
+  display; flex;
+  justify-content:flex-start; /* align left */
+  padding-left: 10px;
   opacity:0;animation:riseUp 1s var(--ease) .65s both;
 }
 .h-card{
+  width:260px;
+  max-width:100%
   background:var(--white);
   border:1px solid var(--border);
   border-radius:12px;overflow:hidden;
